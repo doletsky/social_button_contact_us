@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/social_icons_styles.css" type="text/css" rel="stylesheet" />
+    <script src="./js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div class="ts-mw-button" id="ts-mw-id">
+    <div class="ts-mw-pulse"></div>
+    <div class="ts-mw-tips">
+        <div class="ts-mw-tips-text">Свяжитесь с нами</div>
+        <span class="ts-mw-tips-close" onclick="hidetips();">×</span>
+        <script>function setCookie(e,t,o){var i=new Date;i.setTime(i.getTime()+24*o*60*60*1e3);var n="expires="+i.toUTCString();document.cookie=e+"="+t+";"+n+";path=/"}function getCookies(e){for(var t=e+"=",o=document.cookie.split(";"),i=0;i<o.length;i++){for(var n=o[i];" "==n.charAt(0);)n=n.substring(1);if(0==n.indexOf(t))return n.substring(t.length,n.length)}return""}function hidetips(){$(".ts-mw-tips").remove(),setCookie("ts_tips_cookie","1","1")}$(document).ready(function(){""!=getCookies("ts_tips_cookie")&&$(".ts-mw-tips").remove()});</script>
+    </div>
+    <div class="ts-mw-icon mw-animation mw-animation-2">
+        <div class="slides"><img src="./dest/images/social_icons/ts-phone.svg" alt="+7 965 590-86-86"></div>
+        <!--<div class="slides"><img src="./dest/images/social_icons/ts-telegram.svg" alt="Telegram"></div>-->
+        <div class="slides"><img src="./dest/images/social_icons/ts-whatsapp.svg" alt="Whatsapp"></div>
+        <div class="slides"><img src="./dest/images/social_icons/ts-vk.png" alt="Vkontakte"></div>
+        <div class="slides"><img src="./dest/images/social_icons/ts-mail.svg" alt="Mail"></div>
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <div class="ts-mw-block mw-no-bg  mw-tips tips-right">
+        <ul class="ts-mw-list">
+            <li class="ts-mw-li ts-phone"><a href="tel:79600483816"><span class="callback-icon"><img src="./dest/images/social_icons/ts-phone.svg" alt="+7 965 590-86-86"></span><span class="ts-link-text">+7 965 590-86-86</span></a></li>
+            <!--<li class="ts-mw-li ts-telegram"><a href="http://t.me/Airat909" rel="nofollow" target="_blank"><span class="tg-icon"><img src="./dest/images/social_icons/ts-telegram.svg" alt="Telegram"></span><span class="ts-link-text">Telegram</span></a></li>-->
+            <li class="ts-mw-li ts-whatsapp"><a href="https://api.whatsapp.com/send?phone=79600483816" rel="nofollow" target="_blank"><span class="whatsapp-icon"><img src="./dest/images/social_icons/ts-whatsapp.svg" alt="Whatsapp"></span><span class="ts-link-text">Whatsapp</span></a></li>
+            <li class="ts-mw-li ts-vk"><a href="https://vk.com/kazan.yacht" rel="nofollow" target="_blank"><span class="vk-icon"><img src="./dest/images/social_icons/ts-vk.png" alt="Vkontakte"></span><span class="ts-link-text">Vkontakte</span></a></li>
+            <li class="ts-mw-li ts-mail"><a href="mailto:kazan.yacht@mail.ru" rel="nofollow" target="_blank"><span class="mail-icon"><img src="./dest/images/social_icons/ts-mail.svg" alt="Mail"></span><span class="ts-link-text">Mail</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="ts-mw-substrate"></div>
+<script>
+    $('.ts-mw-icon,.ts-mw-li a,.ts-mw-substrate').on('click',function(){$('#ts-mw-id').toggleClass('open');$('.ts-mw-substrate').toggleClass('active');});
+    $('.ts-mw-tips').delay(5000).queue(function(show){$(this).css({'opacity':'1','visibility':'visible'});show();});
+    $(document).ready(function(){var a=-1;setInterval(function(){var e=$(".ts-mw-icon div"),s=e.length-1;a<s?a++:a=0,e.removeClass("active").eq(a).addClass("active")},2000),$(".slides").first().addClass("active")});
+</script>
+</body>
+</html>
